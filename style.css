@@ -1,0 +1,403 @@
+:root {
+  --base-color: #e60023;
+  --dark-grey: #767676;
+  --btn-color: #e0e0d9;
+  --btn-hover-color: #cecec7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Courier, monospace, sans-serif;
+}
+
+/* HEADER */
+header {
+  height: 80px;
+}
+
+header .container {
+  height: 100%;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+button {
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* LOGO + BTN:EXPLORAR */
+.logo-explorar {
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+}
+
+.logo {
+  width: 115px;
+  height: 21px;
+  margin-right: 5px;
+}
+
+h1 {
+  font-size: 20px;
+  color: var(--base-color);
+}
+
+a {
+  color: var(--base-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  letter-spacing: -1px;
+}
+
+.logo img {
+  width: 25px;
+  height: 25px;
+}
+
+.logo-explorar .btn {
+  margin: 0 -6px 0 -5px;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* SEARCH */
+.search {
+  background-color: #f1f1f1;
+  width: 66%;
+  height: 48px;
+  margin: 0 16px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search:hover,
+.search input {
+  background-color: #e1e1e1;
+}
+
+.fa-search {
+  color: var(--dark-grey);
+  font-size: 16px;
+}
+
+.search input {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  width: 93%;
+  height: 100%;
+  margin-left: 8px;
+}
+
+/* USER */
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.user .btn {
+  border-radius: 15px;
+  padding: 14px 16px;
+  font-weight: 500;
+}
+
+.user .entrar {
+  background-color: var(--btn-color);
+}
+
+.user .entrar:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.user .conta {
+  background-color: var(--base-color);
+  color: #fff;
+  width: 112px;
+  margin: 10px;
+}
+
+.user .conta:hover {
+  background-color: #cf0120;
+}
+
+.user label {
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 25px;
+  height: 44px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.invisible {
+  width: 390px;
+  height: 125px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px var(--dark-grey);
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  line-height: 280%;
+}
+
+#toggle-menu:checked ~ .invisible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.invisible > a {
+  color: #215d82;
+  width: 370px;
+}
+
+.invisible > a p {
+  padding-left: 7px;
+}
+
+.invisible > a:hover {
+  border-radius: 10px;
+  background-color: var(--btn-color);
+}
+
+.invisible div {
+  width: 355px;
+  font-weight: 600;
+}
+
+.invisible div p {
+  display: inline-block;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  height: 24px;
+  width: 40px;
+  float: right;
+  cursor: pointer;
+}
+
+/* Esconde o checkbox padrão */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Parte visível do switch */
+.slider {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--dark-grey);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* Círculo branco */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 0;
+  bottom: 1px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #000;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateY(-19px);
+}
+
+/* MAIN */
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main > .container {
+  /* background-color: salmon; */
+  width: 85vw;
+  margin-top: 10px;
+  padding: 0 2px;
+}
+
+/* SECTION:EXPLORE */
+#explore-section .container {
+  display: flex;
+  flex-direction: column;
+}
+
+#explore-section h2 {
+  font-size: 33px;
+  margin: 32px 0 35px 10px;
+}
+
+.explore-section__card-group,
+.category-section__card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #fff;
+  padding: 9px;
+}
+
+.explore-section__card {
+  width: 404px;
+  height: 333px;
+  border-radius: 30px;
+  padding: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px #00000030;
+
+  background-position: center;
+  background-color: #00000050;
+  background-blend-mode: overlay;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.explore-section__card:hover {
+  background-color: #00000080;
+}
+
+.explore-section__card:nth-child(1) {
+  background-image: url("assets/images/moda-masculina.jpg");
+}
+
+.explore-section__card:nth-child(2) {
+  background-image: url("assets/images/penteados.jpg");
+}
+
+.explore-section__card:nth-child(3) {
+  background-image: url("assets/images/lirios.jpg");
+}
+
+.explore-section__card-title {
+  font-size: 26px;
+}
+
+.explore-section__card-subtitle {
+  font-size: 17px;
+}
+
+#explore-section button,
+#category-section button {
+  align-self: center;
+  padding: 14px 16px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--btn-color);
+}
+
+#explore-section button:hover,
+#category-section button:hover {
+  background-color: var(--btn-hover-color);
+}
+
+/* SECTION CATEGORY */
+#category-section .container {
+  display: flex;
+  flex-direction: column;
+}
+
+#category-section h2 {
+  font-size: 26px;
+  margin: 64px 0 0 10px;
+}
+
+.category-section__card {
+  width: 236px;
+  height: 118px;
+  margin: 8px 0;
+
+  background-position: center;
+  background-color: #00000050;
+  background-blend-mode: overlay;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.category-section__card:nth-child(1) {
+  background-image: url("assets/images/animais.jpg");
+}
+
+.category-section__card:nth-child(2) {
+  background-image: url("assets/images/art.jpg");
+}
+
+.category-section__card:nth-child(3) {
+  background-image: url("assets/images/beleza.jpg");
+}
+
+.category-section__card:nth-child(4) {
+  background-image: url("assets/images/design.jpg");
+}
+
+.category-section__card:nth-child(5) {
+  background-image: url("assets/images/artesanato-e-diy.jpg");
+}
+
+.category-section__card:nth-child(6) {
+  background-image: url("assets/images/food-and-drink.jpg");
+}
+
+.category-section__card:nth-child(7) {
+  background-image: url("assets/images/home-decor.jpg");
+}
+
+.category-section__card:nth-child(8) {
+  background-image: url("assets/images/moda-masculin-2.jpg");
+}
+
+.category-section__card:nth-child(9) {
+  background-image: url("assets/images/quotes.jpg");
+}
+
+.category-section__card:nth-child(10) {
+  background-image: url("assets/images/tatuagem.jpg");
+}
+
+#category-section button {
+  margin-bottom: 64px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <!-- Link do css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Link Ícone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Ícone da aba (favicon) -->
+    <link rel="shortcut icon" href="https://s.pinimg.com/webapp/pinterest_favicon-70db4fa7.svg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo-explorar">
+                <div class="logo">
+                    <h1>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener">
+                            <img src="assets/images/logo_transparent_144x144.png" alt="Pinterest">Pinterest
+                        </a>
+                    </h1>
+                </div>
+                <button class="btn">Explorar</button>
+            </div>
+
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Pesquise looks, refeições fáceis etc.">
+            </div>
+
+            <div class="user">
+                <button class="btn entrar">Entrar</button>
+                <button class="btn conta">Criar conta</button>
+
+                <!-- Checkbox invisível para controlar o card com opções extras -->
+                <input type="checkbox" id="toggle-menu" hidden>
+                <label for="toggle-menu">&#8964;</label>
+
+                <!-- Menu oculto -->
+                <div class="invisible">
+                    <a href="https://policy.pinterest.com/pt-br/terms-of-service">
+                        <p>Consultar os termos de uso e privacidade</p>
+                    </a>
+
+                    <div>
+                        <p>Não exibir solicitações de login</p>
+
+                        <!-- Switch estilizado -->
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="container">
+
+            <!-- Section:Explore -->
+            <section id="explore-section">
+                <div class="container">
+                    <h2>Explore o melhor do Pinterest</h2>
+
+                    <!-- Grupo de cards com sugestões -->
+                    <div class="explore-section__card-group">
+                        <div class="explore-section__card">
+                            <h3 class="explore-section__card-title">Looks masculinos com boné</h3>
+                            <p class="explore-section__card-subtitle">Estilo street e esportivo</p>
+                        </div>
+                        <div class="explore-section__card">
+                            <h3 class="explore-section__card-title">Penteados com coques</h3>
+                            <p class="explore-section__card-subtitle">Simples e elegantes</p>
+                        </div>
+                        <div class="explore-section__card">
+                            <h3 class="explore-section__card-title">Ideias com lírios</h3>
+                            <p class="explore-section__card-subtitle">Tattoos, buquês e fotos aesthetic</p>
+                        </div>
+                    </div>
+                    <button>Ver mais</button>
+                </div>
+            </section>
+
+            <!-- Section:Categoria -->
+            <section id="category-section">
+                <div class="container">
+                    <h2>Procurar por categoria</h2>
+
+                    <!-- Grupo de cards de categoria -->
+                    <div class="category-section__card-group">
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Animais</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Art</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Beleza</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Design</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Artesanato E Faça Você Mesmo</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Food And Drink</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Home Decor</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Moda Masculina</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Quotes</h3>
+                        </div>
+                        <div class="category-section__card">
+                            <h3 class="category-section__card-title">Tatuagem</h3>
+                        </div>
+                    </div>
+                    <button>Ver mais</button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
