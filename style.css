@@ -1,10 +1,19 @@
 :root {
-  --base-color: #e60023;
-  --dark-grey: #767676;
-  --btn-color: #e0e0d9;
-  --btn-hover-color: #cecec7;
+  /* Brand colors */
+  --base-color: #e60023; /* Primary brand red */
+  --dark-grey: #767676; /* Secondary text color */
+  --btn-color: #e0e0d9; /* Default button background */
+  --btn-hover-color: #cecec7; /* Button hover state */
 }
 
+html {
+  font-size: 62.5%; /* 1rem = 10px (simplify math) */
+}
+body {
+  font-size: 1.6rem; /* Reset body to ~16px */
+}
+
+/* Universal reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,40 +21,35 @@
   font-family: "Inter", Courier, monospace, sans-serif;
 }
 
-/* HEADER */
+/* HEADER STYLES */
 header {
-  height: 80px;
+  height: 8rem;
 }
 
+/* Main header container - flex layout */
 header .container {
   height: 100%;
-  padding: 0 16px;
+  padding: 0 1.6rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-button {
-  border: none;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-/* LOGO + BTN:EXPLORAR */
+/* LOGO */
 .logo-explorar {
   display: flex;
   align-items: center;
-  padding: 0 3px;
+  padding: 0 0.3rem;
 }
 
 .logo {
-  width: 115px;
-  height: 21px;
-  margin-right: 5px;
+  width: 11.5rem;
+  height: 2.1rem;
+  margin-right: 0.5rem;
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 2rem;
   color: var(--base-color);
 }
 
@@ -54,31 +58,21 @@ a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  letter-spacing: -1px;
+  letter-spacing: -0.1rem;
 }
 
 .logo img {
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
-.logo-explorar .btn {
-  margin: 0 -6px 0 -5px;
-  font-weight: 600;
-  padding: 14px 16px;
-  border-radius: 30px;
-  background-color: #000;
-  color: #fff;
-  font-size: 16px;
-}
-
-/* SEARCH */
+/* Search bar with hover effects */
 .search {
   background-color: #f1f1f1;
-  width: 66%;
-  height: 48px;
-  margin: 0 16px;
-  border-radius: 30px;
+  width: 70%; /* Fluid width relative to parent */
+  height: 4.8rem;
+  margin: 0 1.6rem;
+  border-radius: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,16 +85,16 @@ a {
 
 .fa-search {
   color: var(--dark-grey);
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .search input {
-  font-size: 16px;
+  font-size: 1.6rem;
   background-color: transparent;
   border: none;
   width: 93%;
   height: 100%;
-  margin-left: 8px;
+  margin-left: 0.8rem;
 }
 
 /* USER */
@@ -110,53 +104,30 @@ a {
   justify-content: space-evenly;
 }
 
-.user .btn {
-  border-radius: 15px;
-  padding: 14px 16px;
-  font-weight: 500;
-}
-
-.user .entrar {
-  background-color: var(--btn-color);
-}
-
-.user .entrar:hover {
-  background-color: var(--btn-hover-color);
-}
-
-.user .conta {
-  background-color: var(--base-color);
-  color: #fff;
-  width: 112px;
-  margin: 10px;
-}
-
-.user .conta:hover {
-  background-color: #cf0120;
-}
-
 .user label {
-  border-radius: 12px;
+  border-radius: 1.2rem;
   text-align: center;
   font-weight: 100;
-  font-size: 25px;
-  height: 44px;
-  width: 24px;
+  font-size: 2.5rem;
+  height: 4.4rem;
+  width: 2.4rem;
   cursor: pointer;
 }
 
+/* User dropdown menu (hidden by default) */
 .invisible {
-  width: 390px;
-  height: 125px;
-  border-radius: 20px;
-  box-shadow: 0 3px 10px var(--dark-grey);
+  width: 39rem;
+  height: 12.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.3rem 1rem var(--dark-grey);
   display: none;
   position: absolute;
-  top: 70px;
-  right: 20px;
+  top: 7rem; /* Positioned below header */
+  right: 2rem;
   line-height: 280%;
 }
 
+/* Show dropdown when menu toggle is checked */
 #toggle-menu:checked ~ .invisible {
   display: flex;
   flex-direction: column;
@@ -166,20 +137,20 @@ a {
 
 .invisible > a {
   color: #215d82;
-  width: 370px;
+  width: 37rem;
 }
 
 .invisible > a p {
-  padding-left: 7px;
+  padding-left: 0.7rem;
 }
 
 .invisible > a:hover {
-  border-radius: 10px;
+  border-radius: 1rem;
   background-color: var(--btn-color);
 }
 
 .invisible div {
-  width: 355px;
+  width: 35.5rem;
   font-weight: 600;
 }
 
@@ -190,8 +161,8 @@ a {
 /* SWITCH */
 .switch {
   position: relative;
-  height: 24px;
-  width: 40px;
+  height: 2.4rem;
+  width: 4rem;
   float: right;
   cursor: pointer;
 }
@@ -213,17 +184,17 @@ a {
   bottom: 0;
   background-color: var(--dark-grey);
   transition: 0.4s;
-  border-radius: 34px;
+  border-radius: 3.4rem;
 }
 
 /* Círculo branco */
 .slider::before {
   position: absolute;
   content: "";
-  height: 24px;
-  width: 24px;
+  height: 2.4rem;
+  width: 2.4rem;
   left: 0;
-  bottom: 1px;
+  bottom: 0.1rem;
   background-color: #fff;
   transition: 0.4s;
   border-radius: 50%;
@@ -234,20 +205,19 @@ a {
 }
 
 .switch input:checked + .slider::before {
-  transform: translateY(-19px);
+  transform: translateY(-1.9rem);
 }
 
-/* MAIN */
+/* MAIN STYLES */
 main {
   display: flex;
   justify-content: center;
 }
 
 main > .container {
-  /* background-color: salmon; */
-  width: 85vw;
-  margin-top: 10px;
-  padding: 0 2px;
+  width: 1260px;
+  margin-top: 1rem;
+  padding: 0 0.2rem;
 }
 
 /* SECTION:EXPLORE */
@@ -257,8 +227,8 @@ main > .container {
 }
 
 #explore-section h2 {
-  font-size: 33px;
-  margin: 32px 0 35px 10px;
+  font-size: 3.3rem;
+  margin: 3.2rem 0 3.5rem 1rem;
 }
 
 .explore-section__card-group,
@@ -267,24 +237,32 @@ main > .container {
   flex-wrap: wrap;
   justify-content: space-between;
   color: #fff;
-  padding: 9px;
+  padding: 0.9rem;
 }
 
-.explore-section__card {
-  width: 404px;
-  height: 333px;
-  border-radius: 30px;
-  padding: 24px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px #00000030;
-
+/* CARD STYLES */
+.explore-section__card, .category-section__card {
   background-position: center;
+
+  /* Image overlay effect */
   background-color: #00000050;
   background-blend-mode: overlay;
   background-size: cover;
 
+  /* Content alignment */
   display: flex;
-  flex-direction: column-reverse;
+  cursor: pointer;
+}
+
+.explore-section__card {
+  width: 40.4rem;
+  height: 33.3rem;
+  border-radius: 3rem;
+  padding: 2.4rem;
+  box-shadow: 0 0.4rem 1rem #00000030;
+  
+  /* Content alignment */
+  flex-direction: column-reverse; /* Text at bottom */
   align-items: center;
 }
 
@@ -305,21 +283,21 @@ main > .container {
 }
 
 .explore-section__card-title {
-  font-size: 26px;
+  font-size: 2.6rem;
 }
 
 .explore-section__card-subtitle {
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 
 #explore-section button,
 #category-section button {
   align-self: center;
-  padding: 14px 16px;
-  margin-top: 10px;
-  font-size: 16px;
+  padding: 1.4rem 1.6rem;
+  margin-top: 1rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   border: none;
   background-color: var(--btn-color);
 }
@@ -336,26 +314,20 @@ main > .container {
 }
 
 #category-section h2 {
-  font-size: 26px;
-  margin: 64px 0 0 10px;
+  font-size: 2.6rem;
+  margin: 6.4rem 0 0 1rem;
 }
 
+/* Category cards - smaller variant */
 .category-section__card {
-  width: 236px;
-  height: 118px;
-  margin: 8px 0;
+  width: 23.6rem;
+  height: 11.8rem;
+  margin: 0.8rem 0;
+  border-radius: 1.5rem;
 
-  background-position: center;
-  background-color: #00000050;
-  background-blend-mode: overlay;
-  background-size: cover;
-
-  display: flex;
+  /* Content alignment */
   align-items: center;
   justify-content: center;
-
-  cursor: pointer;
-  border-radius: 15px;
 }
 
 .category-section__card:nth-child(1) {
@@ -398,6 +370,50 @@ main > .container {
   background-image: url("assets/images/tatuagem.jpg");
 }
 
+/* BUTTONS STYLES */
+button {
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Primary action button */
+.logo-explorar .btn {
+  margin: 0 -0.6rem 0 -0.5rem;
+  font-weight: 600;
+  padding: 1.4rem 1.6rem;
+  border-radius: 3rem;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.user .btn {
+  border-radius: 1.5rem;
+  padding: 1.4rem 1.6rem;
+  font-weight: 500;
+}
+
+/* Secondary button */
+.user .entrar {
+  background-color: var(--btn-color);
+}
+
+.user .entrar:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.user .conta {
+  background-color: var(--base-color);
+  color: #fff;
+  width: 11.2rem;
+  margin: 1rem;
+}
+
+.user .conta:hover {
+  background-color: #cf0120;
+}
+
 #category-section button {
-  margin-bottom: 64px;
+  margin-bottom: 6.4rem;
 }
